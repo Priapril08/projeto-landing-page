@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+* { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --azul: #3b4e66;
+    --azulClaro: #3b4e66c2;
+    --verde: #78a56a;
+    --branco: #ffffff;
+}
+
+
+/* Grupos */
+.quemsomos,
+.products,
+.contact,
+footer {
+    padding: 50px 25vw;
+}
+
+h1 {
+    font-size: 75px;
+    font-weight: 200;
+    color: var(--azul);
+}
+
+h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: left;
+    color: var(--azul);
+}
+
+h3 {
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+/* Seletores do Header */
+header {
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20vw;
+    border-bottom: 10px solid var(--verde);
+}
+
+header img {
+    width: 25%;
+}
+header nav {
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+}
+header nav a{
+    color: var(--branco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px 30px;
+}
+
+header nav a:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+    border-radius: 100px;
+}
+
+/* Seletores do Main */
+main {
+    padding: 50px 0 0 ;
+    text-align: center;
+}
+main h1 {
+    text-transform: uppercase;
+}
+
+main .quemsomos article {
+    display: flex;
+    justify-content: space-between;
+}
+main .quemsomos article p {
+    width: 90%;
+    text-align: justify;
+    line-height: 27px;
+}
+main .quemsomos article img {
+    width: 55%;
+    height: 50%;
+    margin-top: 10px;
+}
+
+main .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .products h2 {
+    width: 100%;
+    margin-bottom: 50px;
+}
+main .products article {
+    border-radius: 15px;
+    border: solid 1px var(--azulClaro);
+    width: 48%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .products article h3{
+    margin-bottom: 30px;
+}
+main .products article p {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    line-height: 28px;
+}
+main .products article img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+main .products article a {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .products article a:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+main .contact {
+    background-color: var(--azulClaro);
+    border-top: solid 10px var(--azul);
+}
+main .contact h2 {
+    text-transform: uppercase;
+}
+main .contact form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+main .contact form label {
+    margin: 0 0 5px;
+    font-weight: 400;
+}
+main .contact form input {
+    padding: 10px 30px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+main .contact form button {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 10px 30px;
+    width: 200px;
+    height: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+main .contact form button:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+/* Seletores do footer */
+footer {
+    background-color: var(--verde);
+    border-top: 10px solid var(--azul);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul {
+    display: flex;
+}
+footer ul li {
+    margin-right: 15px;
+}
+footer ul li svg {
+    width: 48px;
+    height: 48px;
+}
+footer nav {
+    display: flex;
+    flex-direction: row;
+}
+
+footer svg path {
+    fill: var(--azul);
+}
+
+footer address p{
+    text-align: right;
+    font-style: normal;
+    color: var(--azul);
+}
+footer nav a{
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 10px 30px;
+    margin: 0 10px;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    header nav {
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    main .quemsomos article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main .quemsomos article p {
+        width: auto;
+        margin-bottom: 20px;
+    }
+
+    main .quemsomos article img {
+        width: auto;
+        height: auto;
+    }
+    
+    .quemsomos,
+    .products,
+    .contact,
+    footer {
+        padding: 50px 25px;
+    } 
+
+    .main .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .products article {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav {
+        margin: 30px 0;
+    }
+
+    footer address p{
+        text-align: center;
+        font-style: normal;
+    }
+}
